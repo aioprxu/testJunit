@@ -9,11 +9,11 @@ import java.util.Scanner;
  * Created by Administrator on 2018/3/19.
  */
 public class TestJunit {
-    int array [];
+    static int  array [];
     public TestJunit(int array []){
         this.array=array;
     }
-    public int max(){
+    public static int max(){
         if(array == null || (array.length == 1 && array[0] <= 0)||array.length==0)
         return 0;
 
@@ -26,6 +26,7 @@ public class TestJunit {
             if(sum <= cur)
                 sum = cur;
         }
+        if(sum<0) sum=0;
         return sum;
     }
 }
